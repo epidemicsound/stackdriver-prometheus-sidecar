@@ -28,6 +28,7 @@ spec:
         - \"--prometheus.wal-directory=${DATA_DIR}/wal\"
         - \"--stackdriver.kubernetes.location=${GCP_REGION}\"
         - \"--stackdriver.kubernetes.cluster-name=${KUBE_CLUSTER}\"
+        - \"--include=kube_deployment_status_replicas_available\"
         #- \"--stackdriver.generic.location=${GCP_REGION}\"
         #- \"--stackdriver.generic.namespace=${KUBE_CLUSTER}\"
         ports:
