@@ -29,6 +29,24 @@ spec:
         - \"--stackdriver.kubernetes.location=${GCP_REGION}\"
         - \"--stackdriver.kubernetes.cluster-name=${KUBE_CLUSTER}\"
         - \"--include=kube_deployment_status_replicas_available\"
+        - \"--include=python_gc_objects_collected_total\"
+        - \"--include=python_gc_objects_uncollectable_total\"
+        - \"--include=python_gc_collections_total\"
+        - \"--include=python_info\"
+        - \"--include=process_virtual_memory_bytes\"
+        - \"--include=process_resident_memory_bytes\"
+        - \"--include=process_start_time_seconds\"
+        - \"--include=process_cpu_seconds_total\"
+        - \"--include=process_open_fds\"
+        - \"--include=process_max_fds\"
+        - \"--include=flask_http_request_duration_seconds_bucket\"
+        - \"--include=flask_http_request_duration_seconds_count\"
+        - \"--include=flask_http_request_duration_seconds_sum\"
+        - \"--include=flask_http_request_duration_seconds_created\"
+        - \"--include=flask_http_request_total\"
+        - \"--include=flask_http_request_created\"
+        - \"--include=flask_exporter_info\"
+        - \"--include=app_info\"
         #- \"--stackdriver.generic.location=${GCP_REGION}\"
         #- \"--stackdriver.generic.namespace=${KUBE_CLUSTER}\"
         ports:
@@ -38,3 +56,5 @@ spec:
         - name: ${DATA_VOLUME}
           mountPath: ${DATA_DIR}
 "
+
+
